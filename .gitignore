@@ -125,6 +125,9 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# Webstorm files
+.idea/
+
 # pnpm
 .pnpm-store
 
