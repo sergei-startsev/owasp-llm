@@ -1,6 +1,7 @@
 # Risk Assessment — OWASP LLM02 Sensitive Information Disclosure
 
 **Component:** Customer-support account assistant (`ask*`), built on the Anthropic Messages API.
+
 **Risk:** OWASP LLM02 — Sensitive Information Disclosure (cross-user PII leakage / broken
 data isolation).
 
@@ -9,7 +10,7 @@ data isolation).
 ## 1. Scenario
 
 A support assistant answers account questions (orders, returns, billing).
-To "make lookups easy," the application loads **every customer record** (names, emails, phone numbers, card fragments) into the model context on every request,
+To "make lookups easy," the application loads every customer record (names, emails, phone numbers, card fragments) into the model context on every request,
 and relies on the model to decide what the signed-in user is allowed to see.
 There is no access-control boundary enforced in code. The signed-in user (Alice) should only ever see her own record.
 

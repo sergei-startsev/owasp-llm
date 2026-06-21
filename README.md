@@ -2,9 +2,11 @@
 
 Hands-on demonstrations of two risks from the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/), built with [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-typescript).
 
-- **[LLM01 Prompt Injection](./src/llm01-prompt-injection/RISK.md)** `src/llm01-prompt-injection/`  
+- **[LLM01 Prompt Injection](./src/llm01-prompt-injection/RISK.md)**  
+  `src/llm01-prompt-injection/`  
   Indirect injection makes a summarizer embed attacker-controlled content (phishing link / tracking token) into its output.
-- **[LLM02 Sensitive Information Disclosure](./src/llm02-sensitive-info/RISK.md)** `src/llm02-sensitive-info/`  
+- **[LLM02 Sensitive Information Disclosure](./src/llm02-sensitive-info/RISK.md)**  
+  `src/llm02-sensitive-info/`  
   A support assistant with over-broad context discloses another customer's PII.
 
 For each risk you get:

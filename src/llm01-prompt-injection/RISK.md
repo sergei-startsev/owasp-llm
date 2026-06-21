@@ -1,6 +1,7 @@
 # Risk Assessment — OWASP LLM01 Prompt Injection
 
 **Component:** Document summarization service (`summarize*`), built on the Anthropic Messages API.
+
 **Risk:** OWASP LLM01 — Prompt Injection (specifically _indirect_ injection via untrusted content).
 
 ---
@@ -8,10 +9,10 @@
 ## 1. Scenario
 
 The service ingests documents from untrusted sources — knowledge-base articles, customer emails, support tickets, web pages and returns a short summary to an end user.
-The document author is not the same person as the application operator, so document content is **untrusted input**.
+The document author is not the same person as the application operator, so document content is untrusted input.
 
 The attack hides instructions inside that content.
-Crucially, the payloads that work do **not** look like "ignore your instructions" (modern models resist those).
+Crucially, the payloads that work do not look like "ignore your instructions" (modern models resist those).
 They masquerade as benign formatting: a "verification code", an "analytics tag", a "citation URL", an "action item" with a payment link.
 The `HACKED` canary in the demo stands in for the real payload an attacker would inject: a **phishing link, a tracking pixel, or disinformation**
 that then reaches the user and any downstream system that renders the summary.
