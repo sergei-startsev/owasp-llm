@@ -1,29 +1,31 @@
 {
-  "name": "owasp-llm-demos",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "description": "OWASP LLM Demo - Prompt Injection and Sensitive Information Disclosure.",
-  "scripts": {
-    "llm01:vuln": "tsx src/llm01-prompt-injection/run-vuln.ts",
-    "llm01:fixed": "tsx src/llm01-prompt-injection/run-fixed.ts",
-    "llm02:vuln": "tsx src/llm02-sensitive-info/run-vuln.ts",
-    "llm02:fixed": "tsx src/llm02-sensitive-info/run-fixed.ts",
-  },
-  "dependencies": {
-    "@anthropic-ai/sdk": "0.104.2",
-    "dotenv": "^17.4.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@eslint/json": "^2.0.0",
-    "@eslint/markdown": "^8.0.2",
-    "@types/node": "^26.0.0",
-    "eslint": "^10.5.0",
-    "globals": "^17.6.0",
-    "prettier": "^3.8.4",
-    "tsx": "^4.22.4",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.61.1"
-  }
+    "name": "owasp-llm-demos",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "description": "OWASP LLM Demo - Prompt Injection and Sensitive Information Disclosure.",
+    "scripts": {
+        "llm01:vuln": "tsx src/llm01-prompt-injection/run-vuln.ts",
+        "llm01:fixed": "tsx src/llm01-prompt-injection/run-fixed.ts",
+        "llm02:vuln": "tsx src/llm02-sensitive-info/run-vuln.ts",
+        "llm02:fixed": "tsx src/llm02-sensitive-info/run-fixed.ts",
+        "lint": "eslint .",
+        "prettier": "prettier --write ."
+    },
+    "dependencies": {
+        "@anthropic-ai/sdk": "0.104.2",
+        "dotenv": "^17.4.2"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@eslint/json": "^2.0.0",
+        "@eslint/markdown": "^8.0.2",
+        "@types/node": "^26.0.0",
+        "eslint": "^10.5.0",
+        "globals": "^17.6.0",
+        "prettier": "^3.8.4",
+        "tsx": "^4.22.4",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.61.1"
+    }
 }
